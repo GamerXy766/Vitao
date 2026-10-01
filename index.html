@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pinacoteca — Coleção Vitao</title>
+<title>Coleção Vitao</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -617,10 +617,10 @@ img{ display:block; }
     <div class="inaugural surge" style="animation-delay:.3s" id="inaugural" hidden>
       <div class="facho" aria-hidden="true"></div>
       <button class="obra__botao" id="inauguralBotao" type="button" aria-label="Ver a obra inaugural de perto">
-        <span class="moldura inaugural__moldura"><img src="imagens/topete.webp" alt="Obra inaugural"></span>
+        <span class="moldura inaugural__moldura"><img id="inauguralImg" alt="Obra inaugural"></span>
       </button>
       <div class="inaugural__placa">
-        <span class="num">Obra inaugural</span>
+        <span class="num">Mas bem Avaliada Obra</span>
         <span class="titulo" id="inauguralTitulo">—</span>
       </div>
     </div>
@@ -932,10 +932,10 @@ function construirGabinete(){
    ============================================================ */
 function construirInaugural(){
   const img = $('#inauguralImg');
-  img.alt = obras[0].titulo;
+  img.alt = "Obra Suprema";
   img.addEventListener('load', () => img.classList.add('pronta'));
-  img.src = obras[0].url;
-  $('#inauguralTitulo').textContent = obras[0].titulo;
+  img.src = "images/topete.webp";
+  $('#inauguralTitulo').textContent = "Obra Suprema";
   $('#inaugural').hidden = false;
   $('#inauguralBotao').addEventListener('click', () => abrirVisita(0));
 }
